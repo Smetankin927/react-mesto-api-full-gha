@@ -9,7 +9,7 @@ const cookies = require("cookie-parser");
 const indexRoute = require("./routes/index"); // импортируем роутер
 
 const auth = require("./middlewares/auth");
-
+const { requestLogger, errorLogger } = require("./middlewares/logger");
 const bodyParser = require("body-parser");
 
 const { createUser, login } = require("./controllers/users");
@@ -18,7 +18,11 @@ const { PORT = 3000 } = process.env;
 const app = express();
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:3001",
+      "https://monkey.nomoreparties.co",
+    ],
     credentials: true,
   })
 );
@@ -34,7 +38,7 @@ app.use(bodyParser.json());
 // подключаемся к серверу mongo
 mongoose.connect("mongodb://localhost:27017/mestodb");
 // подключаем мидлвары, роуты и всё остальное...
-
+app.use(requestLogger); // подключаем логгер запросов
 // роуты, не требующие авторизации,
 // например, регистрация и логин
 app.post(
@@ -71,6 +75,7 @@ app.use(auth);
 //все остальные
 app.use("/", indexRoute); // запускаем
 
+app.use(errorLogger); // подключаем логгер ошибок
 //обработка ошибок
 app.use(errors()); // обработчик ошибок celebrate
 
