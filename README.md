@@ -7,7 +7,7 @@
 
 ## Ссылки на проект
 
-IP <62.84.121.233>
+IP (62.84.121.233)
 
 Frontend https://monkey.nomoreparties.co
 
