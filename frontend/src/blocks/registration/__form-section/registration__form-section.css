@@ -1,0 +1,6 @@
+.registration__form-section{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,19 @@
+.registration__button-save{
+    width: 100%;
+    padding: 0;
+    min-height: 50px;
+    margin: auto;
+    margin-top: 186px;
+    background-color:#FFFFFF; 
+    color: #000000;
+    border: 0;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.registration__button-save:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}

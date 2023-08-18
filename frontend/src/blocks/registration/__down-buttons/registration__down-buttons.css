@@ -1,0 +1,13 @@
+.registration__down-buttons{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.registration__down-buttons:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
