@@ -1,6 +1,6 @@
 // duckAuth.js
 
-export const BASE_URL = "http://api.monkey.nomoreparties.co";
+export const BASE_URL = "https://api.monkey.nomoreparties.co";
 
 export const register = (password, email) => {
   return fetch(`${BASE_URL}/signup`, {

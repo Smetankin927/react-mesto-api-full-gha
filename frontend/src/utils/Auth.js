@@ -1,7 +1,7 @@
 // duckAuth.js
 
 //export const BASE_URL = 'https://auth.nomoreparties.co';
-export const BASE_URL = "http://localhost:3000";
+export const BASE_URL = "https://api.monkey.nomoreparties.co";
 
 const getResponseData = (res) => {
   if (!res.ok) {
