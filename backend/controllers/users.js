@@ -37,7 +37,18 @@ function createUser(req, res, next) {
     //     email: user.email,
     //   })
     // ) //fixme? if !user?????
-    .then((user) => res.status(201).send({ data: user }))
+    .then((user) =>
+      res
+        .status(201)
+        .send({
+          data: {
+            name: user.name,
+            about: user.about,
+            avatar: user.avatar,
+            email: user.email,
+          },
+        })
+    ) //was user
     .catch((err) => {
       if (err.name === "ValidationError") {
         next(new ValidationError("Переданы некорректные данные"));
