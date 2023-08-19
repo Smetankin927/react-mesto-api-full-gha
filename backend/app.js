@@ -39,6 +39,12 @@ app.use(bodyParser.json());
 mongoose.connect("mongodb://localhost:27017/mestodb");
 // подключаем мидлвары, роуты и всё остальное...
 app.use(requestLogger); // подключаем логгер запросов
+//краш-тест
+app.get("/crash-test", () => {
+  setTimeout(() => {
+    throw new Error("Сервер сейчас упадёт");
+  }, 0);
+});
 // роуты, не требующие авторизации,
 // например, регистрация и логин
 app.post(
