@@ -1,19 +1,14 @@
-[![Tests](../../actions/workflows/tests-13-sprint.yml/badge.svg)](../../actions/workflows/tests-13-sprint.yml) [![Tests](../../actions/workflows/tests-14-sprint.yml/badge.svg)](../../actions/workflows/tests-14-sprint.yml)
-# Проект Mesto фронтенд + бэкенд
+[![Статус тестов](../../actions/workflows/tests.yml/badge.svg)](../../actions/workflows/tests.yml)
 
-Пишем бэкенд на Экспрессе!!!
-
-## Директории
-
-`/routes` — папка с файлами роутера  
-`/controllers` — папка с файлами контроллеров пользователя и карточки   
-`/models` — папка с файлами описания схем пользователя и карточки  
+# react-mesto-api-full
+Репозиторий для приложения проекта `Mesto`, включающий фронтенд и бэкенд части приложения со следующими возможностями: авторизации и регистрации пользователей, операции с карточками и пользователями. Бэкенд расположите в директории `backend/`, а фронтенд - в `frontend/`. 
   
-Остальные директории вспомогательные, создаются при необходимости разработчиком
+Адрес репозитория: https://github.com/Smetankin927/react-mesto-api-full-gha/tree/main
 
-## Запуск проекта
+## Ссылки на проект
 
-`npm run start` — запускает сервер   
-`npm run dev` — запускает сервер с hot-reload
+IP (62.84.121.233)
 
-Ссылка на репозиторий : https://github.com/Smetankin927/express-mesto-gha
+Frontend https://monkey.nomoreparties.co
+
+Backend https://api.monkey.nomoreparties.co
